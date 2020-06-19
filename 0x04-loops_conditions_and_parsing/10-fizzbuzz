@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# FizzBuzz
+
+for i in {1..100}
+do
+    let fizz=$i%3
+    let buzz=$i%5
+    let fizzbuzz=$i%15
+
+    if [ $fizzbuzz -eq 0 ]
+    then
+        echo "FizzBuzz"
+    elif [ $fizz -eq 0 ]
+    then
+        echo "Fizz"
+    elif [ $buzz -eq 0 ]
+    then
+        echo "Buzz"
+    else
+        echo $i
+    fi
+done
