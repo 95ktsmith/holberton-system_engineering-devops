@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Installs nginx web server and creates an index.html
 
+sudo apt-get update; wait;
 sudo apt-get install -y nginx; wait;
 sudo bash -c 'echo "Holberton School" > /var/www/html/index.html'
