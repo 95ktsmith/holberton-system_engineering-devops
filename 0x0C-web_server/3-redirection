@@ -3,9 +3,6 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-mkdir -p /var/www/html
-sudo service nginx restart
 sudo bash -c 'echo "Holberton School" > /var/www/html/index.html'
 
 url="https://www.youtube.com/watch?v=QH2-TGUlwu4"
