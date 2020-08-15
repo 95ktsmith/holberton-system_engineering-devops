@@ -1,0 +1,5 @@
+#!/user/bin/env bash
+# Configures an nginx server with a custom http response header
+
+sudo sed -i "11i add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+sudo service nginx restart
