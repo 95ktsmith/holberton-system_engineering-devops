@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Substitute correct port, make nginx appear to not be running
+sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+sudo service nginx restart
+rm /run/nginx.pid
