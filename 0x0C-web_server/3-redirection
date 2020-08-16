@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Installs Nginx with a basic index and redirect page
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+mkdir /etc/nginx/html
+sudo service ngxinx restart
+sudo bash -c 'echo "Holberton School" > /var/www/html/index.html'
+
+url="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+search="server_name _;"
+replace="server_name _;\nlocation /redirect_me {\nreturn 301 $url;\n}"
+
+# @ character is used as a delimiter for sed string
+sudo sed -i "s@$search@$replace@" /etc/nginx/sites-available/default
+
+sudo service nginx restart
