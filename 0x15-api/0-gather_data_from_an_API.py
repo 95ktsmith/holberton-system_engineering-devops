@@ -20,4 +20,4 @@ if __name__ == "__main__":
                                                           total_tasks))
     for task in r:
         if task['completed'] is True:
-            print("\t{}".format(task['title']))
+            print("\t {}".format(task['title']))
