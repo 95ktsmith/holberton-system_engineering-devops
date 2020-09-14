@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ Script that returns information about a given employee ID in CSV format"""
-
-import requests
 import json
+import requests
 
 if __name__ == "__main__":
 

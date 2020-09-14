@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ Script that returns information about a given employee ID """
-
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     emp_name = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
