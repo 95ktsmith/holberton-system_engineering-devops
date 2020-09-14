@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ Script that returns information about a given employee ID in CSV format"""
-
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     emp_id = argv[1]
