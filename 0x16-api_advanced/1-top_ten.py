@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" Number of subscribers on a subreddit """
+""" Top Ten """
 
 
-def number_of_subscribers(subreddit):
-    """ Returns the number of subscribers on a subreddit, or 0 if
-        subreddit is not valid.
+def top_ten(subreddit):
+    """ Prints the first 10 post titles under Hot, or None if subreddit
+        is invalid
     """
     import requests
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
