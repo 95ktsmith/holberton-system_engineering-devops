@@ -10,8 +10,8 @@ def number_of_subscribers(subreddit):
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     r = requests.get(url, allow_redirects=False,
                      headers={'User-Agent': 'PlaceholderAgent'})
-    if r.status_code != 200:
+    if r.status_code == 200:
+        for post in r.json()['data']['children']:
+            print(post['data']['title'])
+    else:
         print(None)
-        return
-    for post in r.json()['data']['children']:
-        print(post['data']['title'])
